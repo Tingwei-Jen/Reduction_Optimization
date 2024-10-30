@@ -11,4 +11,5 @@ void reduction_vectorized(float *d_output, const float *d_input, const int numEl
 void reduction_prefetech(float *d_output, const float *d_input, const int numElements);
 void reduction_completely_unroll(float *d_output, const float *d_input, const int numElements);
 void reduction_tuning(float *d_output, const float *d_input, const int numElements);
+void reduction_warp_sync(float *d_output, const float *d_input, const int numElements);
 #endif // REDUCTION_H

@@ -11,16 +11,17 @@
 ### GB/s at 16M Array
 
 <!-- benchmark_results -->
-| Kernels                              |  GB/s  | Performance Relative to Theoretical Value |
+| Kernels                              |  GB/s    | Performance Relative to Theoretical Value |
 |:-------------------------------------|---------:|:-----------------------------------------|
-| Shared                               | `85.9` | 14.1%                                     |
-| Sequential                           | `110.6` | 18.2%                                     |
+| Shared                               | `85.9`   | 14.1%                                     |
+| Sequential                           | `110.6`  | 18.2%                                     |
 | Grid Stride Loop                     | `536.7`  | 88.2%                                    |
 | Unroll Last Warp                     | `540.1`  | 88.8%                                    |
-| Unroll Loop                          | `539.7`   | 88.7%                                    |
+| Unroll Loop                          | `539.7`  | 88.7%                                    |
 | Vectorized                           | `558.5`  | 91.8%                                    |
-| Prefetch                             | `552.5`   | 90.8%                                    |
+| Prefetch                             | `552.5`  | 90.8%                                    |
 | Completely Unroll                    | `559.3`  | 91.9%                                    |
+| Warp Sync                            | `558.4`  | 91.8%                                     |
 | Theoretical Bandwidth                | `608.3`  | 100.0%                                   |
 <!-- benchmark_results -->
 

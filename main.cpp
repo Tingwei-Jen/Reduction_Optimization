@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
     for (int i = start; i <= end; i++) {
         int dataSize = 1 << i;
         printf("Data size: %d\n", dataSize);
-        ReductionProfiler profiler(dataSize, 0);
+        ReductionProfiler profiler(dataSize, 100);
 
         // printf("Reduction Shared: \n");
         // profiler.profiling(reduction_shared);
@@ -134,13 +134,13 @@ int main(int argc, char* argv[]) {
         // profiler.profiling(reduction_prefetech);
         // printf("\n");
         
-        printf("Reduction unroll: \n");
-        profiler.profiling(reduction_completely_unroll);
-        printf("\n");
-
-        // printf("Reduction tuning: \n");
-        // profiler.profiling(reduction_tuning);
+        // printf("Reduction unroll: \n");
+        // profiler.profiling(reduction_completely_unroll);
         // printf("\n");
+
+        printf("Reduction warp sync: \n");
+        profiler.profiling(reduction_warp_sync);
+        printf("\n");
     }
 
 
